@@ -19,7 +19,15 @@ body {
 main { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
 header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 24px; }
 header a.brand { font-weight: 700; font-size: 22px; color: var(--ink); text-decoration: none; }
-nav a { margin-left: 16px; }
+nav { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: baseline; gap: 4px 16px; }
+.lang { position: relative; }
+.lang summary { cursor: pointer; color: var(--accent); list-style: none; }
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " \25BE"; }
+.lang ul { position: absolute; right: 0; top: calc(100% + 8px); z-index: 1; min-width: 200px; margin: 0; padding: 6px 0; list-style: none; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, .18); }
+.lang li { margin: 0; }
+.lang ul a { display: block; padding: 6px 16px; text-decoration: none; }
+.lang ul a[aria-current] { color: var(--ink); font-weight: 600; }
 h1 { font-size: 30px; line-height: 1.25; margin: 0 0 4px; }
 h2 { font-size: 21px; margin: 32px 0 8px; }
 p, li { margin: 0 0 12px; }
